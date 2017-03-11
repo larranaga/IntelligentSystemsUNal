@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/math.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/demo.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/mysql-connector-java-5.1.37-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/services.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/data.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/optimization.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/agents.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/gui.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/evolution.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/types.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/random.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
