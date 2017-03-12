@@ -4,13 +4,14 @@ import unalcol.agents.Action;
 import unalcol.agents.simulate.util.SimpleLanguage;
 
 /**
- * Created by nicol on 10/03/2017.
+ * Created by larra on 10/03/2017.
  */
 enum Actions{
     NOP(0),
     DIE(1),
     ADVANCE(2),
-    ROTATE(3);
+    ROTATE(3),
+    EAT(4);
 
     public static SimpleLanguage language;
     private int actionIndex;
