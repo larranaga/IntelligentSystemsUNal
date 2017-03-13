@@ -3,15 +3,15 @@ package unalcol.agents.examples.labyrinth.multeseo.eater.SII_2017I.hackermen;
 /**
  * Created by larra on 11/03/17.
  */
-public class LabyrinthNode {
+public class Node {
 
     private int x, y;
 
-    public LabyrinthNode(){
+    public Node(){
         x = y = 0;
     }
 
-    public LabyrinthNode(int _x, int _y){
+    public Node(int _x, int _y){
         x = _x;
         y = _y;
     }
@@ -34,7 +34,7 @@ public class LabyrinthNode {
             return false;
         if(getClass() != obj.getClass())
             return false;
-        LabyrinthNode o = (LabyrinthNode)obj;
+        Node o = (Node)obj;
         if(x != o.x)
             return false;
         if(y != o.y)
@@ -44,7 +44,7 @@ public class LabyrinthNode {
 
     @Override
     protected Object clone() {
-        return new LabyrinthNode(x,y);
+        return new Node(x,y);
     }
 
     @Override
@@ -52,34 +52,34 @@ public class LabyrinthNode {
         return "Node ["+x+", "+y+"]";
     }
 
-    public LabyrinthNode forward(int direction){
+    public Node forward(int direction){
         switch ( direction %4){
             case 0:{
-                return new LabyrinthNode(x,y + 1);
+                return new Node(x,y + 1);
             }
             case 1:{
-                return new LabyrinthNode(x + 1,y);
+                return new Node(x + 1,y);
             }
             case 2:{
-                return new LabyrinthNode(x, y - 1);
+                return new Node(x, y - 1);
             }
             case 3:{
-                return new LabyrinthNode(x - 1,y);
+                return new Node(x - 1,y);
             }
         }
         return null;
     }
 
-    public LabyrinthNode[] getNeighbors(int direction){
+    public Node[] getNeighbors(int direction){
         final int DIRECTIONS = 4;
-        LabyrinthNode[] neighbors = new LabyrinthNode[DIRECTIONS];
+        Node[] neighbors = new Node[DIRECTIONS];
         for (int i = 0; i < DIRECTIONS; i++) neighbors[i] = forward((direction + i)%DIRECTIONS);
 
         return neighbors;
 
     }
 
-    public LabyrinthNode[] getNeighbors(){
+    public Node[] getNeighbors(){
         return getNeighbors(0);
     }
 }

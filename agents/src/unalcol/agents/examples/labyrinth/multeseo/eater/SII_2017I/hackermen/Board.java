@@ -5,11 +5,11 @@ import java.util.HashMap;
 /**
  * Created by larra on 11/03/17.
  */
-public class LabyrinthBoard<N extends LabyrinthNode> {
+public class Board<N extends Node> {
     private HashMap<N, HashMap<N, Long>> board;
     private HashMap<N, Long> explored;
 
-    public LabyrinthBoard(){
+    public Board(){
         board = new HashMap<N, HashMap<N, Long>>();
         explored = new HashMap<N, Long>();
     }
@@ -42,7 +42,7 @@ public class LabyrinthBoard<N extends LabyrinthNode> {
             board.get(n1).remove(n2);
 
         if(!board.containsKey(n2))
-            board.put(n1, new HashMap<N, Long>());
+            board.put(n2, new HashMap<N, Long>());
         if(board.get(n2).containsKey(n1))
             board.get(n2).remove(n1);
     }
