@@ -1,4 +1,4 @@
-package unalcol.agents.examples.labyrinth.multeseo.eater.SII_2017I.hackermen;
+package unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.hackermen;
 
 /**
  * Created by larra on 11/03/17.

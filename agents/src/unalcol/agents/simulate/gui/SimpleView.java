@@ -7,7 +7,7 @@ public class SimpleView implements EnvironmentView {
   }
 
   public void envChanged( String command ){
-    try{ Thread.sleep(100); }catch (Exception e) { e.printStackTrace(); }
+    try{ Thread.sleep(40); }catch (Exception e) { e.printStackTrace(); }
     // There is just one agent
     if( command != null ){
       if (command.indexOf(ERROR) == 0) {

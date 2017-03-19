@@ -1,4 +1,4 @@
-package unalcol.agents.examples.labyrinth.multeseo.eater.SII_2017I.hackermen;
+package unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.hackermen;
 
 import java.util.Deque;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import unalcol.agents.simulate.util.SimpleLanguage;
 /**
  * Created by larra on 13/03/17.
  */
-public class HackermenAgent implements AgentProgram{
+public class HackermenAgentProgram implements AgentProgram{
     static boolean DEBUG = false;
 
     private Deque<Action> actionsQueue;
@@ -21,7 +21,7 @@ public class HackermenAgent implements AgentProgram{
     private int currentDir;
     private Node currNode;
 
-    public HackermenAgent(SimpleLanguage language){
+    public HackermenAgentProgram(SimpleLanguage language){
         super();
         Actions.language = language;
         Perceptions.language = language;
@@ -53,12 +53,14 @@ public class HackermenAgent implements AgentProgram{
                         Perceptions.WBACK.getBooleanPerception(p),
                         Perceptions.WLEFT.getBooleanPerception(p) };
 
-        boolean[] adjacent_agent = { false, false, false, false };
-                /*{     Perceptions.AFRONT.getBooleanPerception(p),
+
+
+        boolean[] adjacent_agent = //{ false, false, false, false };
+                {       Perceptions.AFRONT.getBooleanPerception(p),
                         Perceptions.ARIGHT.getBooleanPerception(p),
                         Perceptions.ABACK.getBooleanPerception(p),
                         Perceptions.ALEFT.getBooleanPerception(p) };
-                        */
+
 
         boolean[] obstacle = { wall[0] || adjacent_agent[0],
                         wall[1] || adjacent_agent[1],
