@@ -2,12 +2,140 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f90cc66-c220-4759-b0ae-b490d199fc49" name="Default" comment="finished Agent (untested)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/README.md" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterLabyrinth.class" afterPath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterLabyrinth.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterLabyrinthDrawer.class" afterPath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterLabyrinthDrawer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/Board.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/DummyFourInRowAgentProgram.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/FourInRow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/FourInRowDrawer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/FourInRowMain.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/reversi/Clock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/reversi/ReversiPercept.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/Board.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/Sudoku.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/SudokuDrawer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/SudokuLanguage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/SudokuMain.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/SudokuPercept.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/naive/NaiveSudokuAgentProgram.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/naive/NaiveSudokuBoardState.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/naive/NaiveSudokuGoalTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/naive/NaiveSudokuSearchSpace.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/bullsandcows/BullsCowsGame.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/bullsandcows/NumberIndex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/bullsandcows/SimpleBCPlayer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Actions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Board.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/HackermenAgent.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Node.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/NodeComp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Perceptions.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/Board.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/Clock.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/DummyReversiAgentProgram.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/Reversi.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/ReversiDrawer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/ReversiMain.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/ReversiMainFrame$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/ReversiMainFrame$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/ReversiMainFrame$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/ReversiMainFrame.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/reversi/ReversiPercept.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/Board.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/DummySquaresAgentProgram.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/Squares.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/SquaresDrawer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/SquaresMain.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/SquaresMainFrame$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/SquaresMainFrame$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/SquaresMainFrame$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/SquaresMainFrame.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/SquaresPercept.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/squares/State.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/Board.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/Sudoku.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/SudokuDrawer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/SudokuLanguage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/SudokuMain.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/SudokuMainFrame$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/SudokuMainFrame$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/SudokuMainFrame$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/SudokuMainFrame$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/SudokuMainFrame.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/SudokuPercept.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/naive/NaiveSudokuAgentProgram.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/naive/NaiveSudokuBoardState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/naive/NaiveSudokuGoalTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/sudoku/naive/NaiveSudokuSearchSpace.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/MultiAgentLabyrinthPercept.class" afterPath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/MultiAgentLabyrinthPercept.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.class" afterPath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterPercept.class" afterPath="$PROJECT_DIR$/out/production/agents/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterPercept.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/agents/unalcol/agents/simulate/gui/SimpleView.class" afterPath="$PROJECT_DIR$/out/production/agents/unalcol/agents/simulate/gui/SimpleView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/index-files/index-18.html" afterPath="$PROJECT_DIR$/types/doc/index-files/index-18.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/index-files/index-19.html" afterPath="$PROJECT_DIR$/types/doc/index-files/index-19.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/index-files/index-23.html" afterPath="$PROJECT_DIR$/types/doc/index-files/index-23.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/index-files/index-3.html" afterPath="$PROJECT_DIR$/types/doc/index-files/index-3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/index-files/index-9.html" afterPath="$PROJECT_DIR$/types/doc/index-files/index-9.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/serialized-form.html" afterPath="$PROJECT_DIR$/types/doc/serialized-form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/BullsCowsGame.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/BullsCowsGame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/NumberIndex.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/NumberIndex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/SimpleBCPlayer.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/SimpleBCPlayer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/class-use/BullsCowsGame.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/class-use/BullsCowsGame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/class-use/NumberIndex.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/class-use/NumberIndex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/class-use/SimpleBCPlayer.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/bullsandcows/class-use/SimpleBCPlayer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/Board.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/Board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/Clock.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/Clock.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/DummyReversiAgentProgram.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/DummyReversiAgentProgram.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/Reversi.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/Reversi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/ReversiDrawer.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/ReversiDrawer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/ReversiMain.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/ReversiMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/ReversiMainFrame.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/ReversiMainFrame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/ReversiPercept.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/ReversiPercept.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/Board.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/Board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/Clock.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/Clock.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/DummyReversiAgentProgram.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/DummyReversiAgentProgram.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/Reversi.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/Reversi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/ReversiDrawer.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/ReversiDrawer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/ReversiMain.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/ReversiMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/ReversiMainFrame.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/ReversiMainFrame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/ReversiPercept.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/reversi/class-use/ReversiPercept.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/Board.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/Board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/DummySquaresAgentProgram.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/DummySquaresAgentProgram.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/Squares.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/Squares.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/SquaresDrawer.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/SquaresDrawer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/SquaresMain.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/SquaresMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/SquaresMainFrame.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/SquaresMainFrame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/SquaresPercept.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/SquaresPercept.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/State.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/State.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/WalkBoard.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/WalkBoard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/Board.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/Board.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/DummySquaresAgentProgram.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/DummySquaresAgentProgram.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/Squares.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/Squares.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/SquaresDrawer.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/SquaresDrawer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/SquaresMain.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/SquaresMain.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/SquaresMainFrame.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/SquaresMainFrame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/SquaresPercept.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/SquaresPercept.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/State.html" afterPath="$PROJECT_DIR$/types/doc/unalcol/agents/examples/squares/class-use/State.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/bullsandcows/BullsCowsGame.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/bullsandcows/BullsCowsGame.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/bullsandcows/NumberIndex.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/bullsandcows/NumberIndex.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/bullsandcows/SimpleBCPlayer.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/bullsandcows/SimpleBCPlayer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/reversi/Board.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/reversi/Board.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/reversi/Clock.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/Clock.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/reversi/DummyReversiAgentProgram.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/reversi/DummyReversiAgentProgram.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/reversi/Reversi.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/reversi/Reversi.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/reversi/ReversiDrawer.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/reversi/ReversiDrawer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/reversi/ReversiMain.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/reversi/ReversiMain.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/reversi/ReversiMainFrame.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/reversi/ReversiMainFrame.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/reversi/ReversiPercept.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/FourInRowPercept.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/squares/Board.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/squares/Board.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/squares/DummySquaresAgentProgram.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/squares/DummySquaresAgentProgram.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/squares/Squares.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/squares/Squares.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/squares/SquaresDrawer.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/squares/SquaresDrawer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/squares/SquaresMain.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/squares/SquaresMain.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/squares/SquaresMainFrame.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/squares/SquaresMainFrame.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/squares/SquaresPercept.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/squares/SquaresPercept.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/squares/State.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/squares/State.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/sudoku/SudokuMainFrame.java" afterPath="$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/FourInRowMainFrame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,10 +148,22 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="unalcol-master" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -32,6 +172,96 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sudoku.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../unalcol-original/unalcol-master/agents/src/unalcol/agents/examples/sudoku/Sudoku.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-347">
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../unalcol-original/unalcol-master/agents/src/unalcol/agents/examples/sudoku/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NaiveSudokuAgentProgram.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../unalcol-original/unalcol-master/agents/src/unalcol/agents/examples/sudoku/naive/NaiveSudokuAgentProgram.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FourInRowMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/FourInRowMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultiTeseoEaterMain.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FourInRow.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/FourInRow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DummyFourInRowAgentProgram.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/DummyFourInRowAgentProgram.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Agent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/Agent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,8 +299,9 @@
         <option value="$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Board.java" />
         <option value="$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Perceptions.java" />
         <option value="$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/HackermenAgent.java" />
-        <option value="$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/../unalcol-original/unalcol-master/agents/src/unalcol/agents/examples/sudoku/naive/NaiveSudokuAgentProgram.java" />
+        <option value="$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.java" />
       </list>
     </option>
   </component>
@@ -81,10 +312,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="-8" />
-    <option name="width" value="1874" />
-    <option name="height" value="1096" />
+    <option name="x" value="55" />
+    <option name="width" value="943" />
+    <option name="height" value="1077" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -102,6 +332,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -153,94 +384,8 @@
               <option name="myItemId" value="examples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unalcol-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="labyrinth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unalcol-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labyrinth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teseo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unalcol-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agents" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="labyrinth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="teseo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -342,15 +487,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hackermen" />
+              <option name="myItemId" value="ISI2017I" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unalcol-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unalcol-master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fourinrow" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,9 +559,22 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../unalcol-original" />
   </component>
-  <component name="RunManager" selected="Application.MultiTeseoEaterMain">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.FourInRowMain">
     <configuration default="false" name="MultiTeseoEaterMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -370,6 +583,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="unalcol.agents.examples.labyrinth.multeseo.eater.MultiTeseoEaterMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="agents" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="FourInRowMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="unalcol.agents.examples.games.fourinrow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="unalcol.agents.examples.games.fourinrow.FourInRowMain" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -664,6 +897,13 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -762,17 +1002,22 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.MultiTeseoEaterMain" />
+      <item index="1" class="java.lang.String" itemvalue="Application.FourInRowMain" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.MultiTeseoEaterMain" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.FourInRowMain" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MultiTeseoEaterMain" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -782,7 +1027,18 @@
       <option name="presentableId" value="Default" />
       <updated>1489189085638</updated>
       <workItem from="1489189088854" duration="3061000" />
-      <workItem from="1489368508627" duration="12127000" />
+      <workItem from="1489368508627" duration="12726000" />
+      <workItem from="1489547881809" duration="776000" />
+      <workItem from="1489813257160" duration="904000" />
+      <workItem from="1489814633008" duration="599000" />
+      <workItem from="1490649764485" duration="814000" />
+      <workItem from="1490843528972" duration="466000" />
+      <workItem from="1490844161000" duration="778000" />
+      <workItem from="1490850019839" duration="768000" />
+      <workItem from="1490851742569" duration="476000" />
+      <workItem from="1490853369813" duration="1088000" />
+      <workItem from="1491105713662" duration="202000" />
+      <workItem from="1491972765660" duration="1217000" />
     </task>
     <task id="LOCAL-00001" summary="added README.md (test from intellij)">
       <created>1489205311806</created>
@@ -816,41 +1072,49 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15188000" />
+    <option name="totallyTimeSpent" value="23875000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="false" />
+    <frame x="55" y="0" width="943" height="1077" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296146" sideWeight="0.36813778" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26935312" sideWeight="0.6318622" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26977688" sideWeight="0.6318622" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17761034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2966559" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -874,202 +1138,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/HackermenAgent.java">
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthPerceptDrawer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4395#4407#0" expanded="true" />
-            <element signature="e#4462#4477#0" expanded="true" />
-            <element signature="e#4534#4549#0" expanded="true" />
-            <element signature="e#4602#4617#0" expanded="true" />
-            <element signature="e#5127#5133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/teseo/simple/RandomReflexTeseo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Actions.java">
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen.java" />
-    <entry file="file://$PROJECT_DIR$/agents/README.md" />
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterLabyrinth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterLabyrinthDrawer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/lang/Boolean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="130" column="19" lean-forward="false" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
-          <folding>
-            <element signature="e#3834#3835#0" expanded="false" />
-            <element signature="e#3862#3863#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/simulate/util/SimpleLanguage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/Labyrinth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="252" column="0" lean-forward="false" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/Agent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/Percept.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/teseo/simple/RandomReflexTeseo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-          <folding>
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/teseo/simple/SimpleTeseoAgentProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="44" column="45" lean-forward="true" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/HackermenAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1505">
-          <caret line="115" column="35" lean-forward="false" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4395#4407#0" expanded="true" />
-            <element signature="e#4462#4477#0" expanded="true" />
-            <element signature="e#4534#4549#0" expanded="true" />
-            <element signature="e#4602#4617#0" expanded="true" />
-            <element signature="e#5127#5133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/NodeComp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Perceptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
-          <folding>
-            <element signature="e#825#826#0" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1082,6 +1162,327 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/teseo/TeseoPercept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthPercept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthPerceptDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="18" column="82" lean-forward="false" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/teseo/TeseoPercept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthPercept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthPerceptDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/HackermenAgent.java" />
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/teseo/simple/RandomReflexTeseo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Actions.java" />
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen.java" />
+    <entry file="file://$PROJECT_DIR$/agents/README.md" />
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterLabyrinth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterLabyrinthDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/src.zip!/java/lang/Boolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="130" column="19" lean-forward="false" selection-start-line="130" selection-start-column="19" selection-end-line="130" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/simulate/util/SimpleLanguage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/Labyrinth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="252" column="0" lean-forward="false" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/Percept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/teseo/simple/RandomReflexTeseo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/teseo/simple/SimpleTeseoAgentProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Actions.java" />
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Board.java" />
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/NodeComp.java" />
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Perceptions.java" />
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/Node.java" />
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthPercept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthPerceptDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/LabyrinthUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="55" lean-forward="false" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/SII_2017I/hackermen/HackermenAgent.java" />
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/teseo/TeseoPercept.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="18" column="82" lean-forward="false" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../unalcol-original/unalcol-master/agents/src/unalcol/agents/examples/sudoku/Sudoku.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-347">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../unalcol-original/unalcol-master/agents/src/unalcol/agents/examples/sudoku/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../unalcol-original/unalcol-master/agents/src/unalcol/agents/examples/sudoku/naive/NaiveSudokuAgentProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/FourInRowMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/labyrinth/multeseo/eater/MultiTeseoEaterMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/Agent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/FourInRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agents/src/unalcol/agents/examples/games/fourinrow/DummyFourInRowAgentProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="36" column="51" lean-forward="true" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

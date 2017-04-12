@@ -29,7 +29,7 @@ public class MultiTeseoEaterMain {
 	    teseo[2] = new TeseoCEM( getLanguage() );
 	    teseo[3] = new HackermenAgentProgram(getLanguage());
 	    teseo[4] = new SuperTeseo(getLanguage());
-		teseo[5] = new unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.turianos.Agent1(getLanguage());
+
 		teseo[6] = new ARREA2(getLanguage());
 		  teseo[7] = new MessiTeseo(getLanguage());
 		teseo[8] = new SimpleAgentSCS(getLanguage());
