@@ -41,7 +41,7 @@ public abstract class SimpleTeseoAgentProgram  implements AgentProgram{
   /**
    * execute
    *
-   * @param perception Perception
+   * @param perception Perceptions
    * @return Action[]
    */
   public Action compute(Percept p){
@@ -79,7 +79,7 @@ public abstract class SimpleTeseoAgentProgram  implements AgentProgram{
   /**
    * goalAchieved
    *
-   * @param perception Perception
+   * @param perception Perceptions
    * @return boolean
    */
   public boolean goalAchieved( Percept p ){
