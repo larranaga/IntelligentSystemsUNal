@@ -12,7 +12,6 @@ import java.util.Map;
  */
 public class Board {
     protected int[][] board;
-    public static final int INF = 1000000;
 
     public Board(int size){
         board = new int[size][size];
@@ -30,13 +29,12 @@ public class Board {
         }
     }
 
-    int count(String player){
-        int id = getOwnerId(player);
+    int count(){
         int size = board.length;
         int ans = 0;
-        for(int i = 0; i < size; i++)
-            for(int j = 0; j < size; j++)
-                ans += (board[i][j] == id ? 1 : 0);
+        for(int i = 0; i < board.length; i++)
+            for(int j = 0; j < board[0].length; j++)
+                ans += (board[i][j] != 0 ? 1 : 0);
         return ans;
     }
 
@@ -70,9 +68,8 @@ public class Board {
     }
 
     public boolean isFull(){
-        int a = count(FourInRow.WHITE);
-        int b = count(FourInRow.BLACK);
-        return (a + b == board.length * board[0].length);
+        int a = count();
+        return (a == board.length * board[0].length);
     }
     public static String swapPlayer(String player){
         return (player.equals(FourInRow.WHITE) ? FourInRow.BLACK : FourInRow.WHITE);
@@ -83,9 +80,12 @@ public class Board {
             return false;
         if(board[x][y] != 0)
             return false;
-        if(x < board.length -1 && board[x + 1][y] == 0 )
+        if(x == board.length -1)
+            return true;
+        else if(board[x + 1][y] != 0)
+            return true;
+        else
             return false;
-        return true;
     }
 
     Map<Board, String> getChildren(String player){
@@ -97,8 +97,8 @@ public class Board {
                 if(validPosition(i,j)){
                     b = new Board(this);
                     b.setOwner(i,j,player);
-                    player =  Board.swapPlayer(player);
-                    action = (board.length -1 - j + ":" + i);
+                    action = (i + ":" + j + ":" + player);
+                    System.out.println(action);
                     ans.put(b, action);
                 }
             }
@@ -121,9 +121,9 @@ public class Board {
         int bad_threes= getStreak( bad, 3);
         int bad_twos = getStreak( bad, 2);
         if (good_fours > 0)
-            return INF;
+            return Integer.MAX_VALUE;
         if(bad_fours > 0)
-            return -INF;
+            return Integer.MIN_VALUE;
 
         return (good_threes*100 + good_twos*10) - (bad_threes*100 + bad_twos*10);
     }

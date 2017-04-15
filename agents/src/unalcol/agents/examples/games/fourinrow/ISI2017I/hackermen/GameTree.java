@@ -18,41 +18,24 @@ public class GameTree {
     private Map<Board, Integer> value;
     private Map<Board, Board> maxPruning;
     private Map<Board, Board> minPruning;
-    private Explorer explorer;
-    private static final int MAX_DEPTH = 6;
+    private static final int MAX_DEPTH = 4;
 
-    public GameTree(Board _root, String _player){
+    public GameTree(Board root, String player){
         super();
         gameTree = new HashMap<>();
         enemyTree = new HashMap<>();
         bestChild = new HashMap<>();
-        root = _root;
-        player = _player;
+        this.root = root;
+        this.player = player;
         depth = 0;
         value = new HashMap<>();
         maxPruning = new HashMap<>();
         minPruning = new HashMap<>();
     }
 
-    public void setRoot(Board _root){
-        stopExplorer();
-        root = _root;
+    public void setRoot(Board root){
+        root = this.root;
         depth = 0;
-        startExplorer();
-    }
-
-    @SuppressWarnings("deprecation")
-    public void stopExplorer(){
-        if(explorer != null){
-            explorer.stop();
-            explorer = null;
-        }
-    }
-
-    public void startExplorer(){
-        stopExplorer();
-        explorer = new Explorer();
-        explorer.start();
     }
 
     public String get(Board b1, Board b2)
@@ -69,6 +52,13 @@ public class GameTree {
         return null;
     }
 
+    public String getBestMove()
+    {
+        if (bestChild.containsKey(this.root))
+            return get(this.root, bestChild.get(this.root));
+        return null;
+    }
+
     public Board getBestChild(Board state)
     {
         if (bestChild.containsKey(state))
@@ -81,68 +71,81 @@ public class GameTree {
         return value.get(board);
     }
 
-
-
-    public int increaseDepth(){
-        alpha_beta(root, ++depth, Integer.MIN_VALUE, Integer.MAX_VALUE, true);
-        return depth;
+    public void explore(){
+        alphabeta(root, ++depth, Integer.MIN_VALUE, Integer.MAX_VALUE, true);
     }
 
-    private int alpha_beta(Board root, int depth, int a, int b, boolean maximize){
-        if((depth == 0) || root.isFull())
-            return root.eval(player);
-        if(maximize){
+    private int alphabeta(Board currentRoot, int depth, int a, int b, boolean maximize)
+    {
+        if ((depth > MAX_DEPTH) || currentRoot.isFull())
+            return currentRoot.eval(player);
+        if (maximize)
+        {
             int bestVal = Integer.MIN_VALUE;
             Board bestBoard = null;
-            if(!gameTree.containsKey(root))
-                gameTree.put(root, root.getChildren(player));
-            Set<Board> children = new LinkedHashSet<>();
-            if(maxPruning.containsKey(root))
-                children.add(maxPruning.get(root));
-            children.addAll(enemyTree.get(root).keySet());
-            for(Board child : children){
-                int newVal = alpha_beta(child, depth - 1, a, b, false);
-                if(newVal > bestVal){
-                    bestVal = newVal;
+            if (!gameTree.containsKey(currentRoot))
+            {
+                gameTree.put(currentRoot, currentRoot.getChildren(player));
+            }
+            Set<Board> children = new LinkedHashSet<Board>();
+            if (maxPruning.containsKey(currentRoot))
+            {
+                children.add(maxPruning.get(currentRoot));
+            }
+            children.addAll(gameTree.get(currentRoot).keySet());
+            for (Board child : children)
+            {
+                int childVal = alphabeta(child, depth + 1, a, b, false);
+                if (childVal > bestVal)
+                {
+                    bestVal = childVal;
                     bestBoard = child;
                 }
-                a = Math.max(a, bestVal);
-                if(b <= a){
-                    maxPruning.put(root, child);
+                if (bestVal > a)
+                {
+                    a = bestVal;
+                }
+                if (b <= a)
+                {
+                    maxPruning.put(currentRoot, child);
                     break;
                 }
             }
-            bestChild.put(root, bestBoard);
-            value.put(root, bestVal);
+            bestChild.put(currentRoot, bestBoard);
+            value.put(currentRoot, bestVal);
             return bestVal;
         }
-        else{
+        else
+        {
             int bestVal = Integer.MAX_VALUE;
-            if(!enemyTree.containsKey(root))
-                enemyTree.put(root, root.getChildren(Board.swapPlayer(player)));
-            Set<Board> children = new LinkedHashSet<>();
-            if(minPruning.containsKey(root))
-                children.add(minPruning.get(root));
-            children.addAll(enemyTree.get(root).keySet());
-            for(Board child: children){
-                int newVal = alpha_beta(child, depth-1, a, b, true);
-                bestVal = Math.min(bestVal, newVal );
-                b = Math.min(b, bestVal);
-                if(b <=a){
-                    minPruning.put(root, child);
+            if (!enemyTree.containsKey(currentRoot))
+            {
+                enemyTree.put(currentRoot, currentRoot.getChildren(Board.swapPlayer(player)));
+            }
+            Set<Board> children = new LinkedHashSet<Board>();
+            if (minPruning.containsKey(currentRoot))
+            {
+                children.add(minPruning.get(currentRoot));
+            }
+            children.addAll(enemyTree.get(currentRoot).keySet());
+            for (Board child : children)
+            {
+                int newVal = alphabeta(child, depth + 1, a, b, true);
+                if (newVal < bestVal)
+                {
+                    bestVal = newVal;
+                }
+                if (bestVal < b)
+                {
+                    b = bestVal;
+                }
+                if (b <= a)
+                {
+                    minPruning.put(currentRoot, child);
                     break;
                 }
             }
             return bestVal;
-        }
-    }
-
-    private class Explorer extends Thread{
-        @Override
-        public void run() {
-            while(depth < MAX_DEPTH){
-                increaseDepth();
-            }
         }
     }
 }

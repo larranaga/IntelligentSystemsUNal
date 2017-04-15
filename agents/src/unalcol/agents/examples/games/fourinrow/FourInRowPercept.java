@@ -11,12 +11,12 @@ import unalcol.agents.examples.games.Clock;
  *
  * @author Jonatan
  */
-public class FourInRowPercept extends Percept{
+public class FourInRowPercept extends Percept {
     
     protected Board board;
     protected Clock clock;
   
-    public FourInRowPercept( Board board, Clock clock ) {
+    public FourInRowPercept(Board board, Clock clock ) {
       this.board = board;
       this.clock = clock;
     }

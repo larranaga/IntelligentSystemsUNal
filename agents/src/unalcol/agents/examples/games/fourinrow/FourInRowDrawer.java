@@ -4,15 +4,16 @@
  */
 package unalcol.agents.examples.games.fourinrow;
 
-import java.awt.Graphics;
 import unalcol.agents.simulate.Environment;
 import unalcol.agents.simulate.gui.Drawer;
+
+import java.awt.*;
 
 /**
  *
  * @author Jonatan
  */
-public class FourInRowDrawer extends Drawer{
+public class FourInRowDrawer extends Drawer {
     public static int DRAW_AREA_SIZE = 180;
     public static int CELL_SIZE = 20;
     public static int MARGIN = 10;

@@ -4,29 +4,23 @@
  */
 package unalcol.agents.examples.games.fourinrow;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 import unalcol.agents.Agent;
 import unalcol.agents.examples.games.Clock;
 import unalcol.agents.simulate.gui.EnvironmentView;
 import unalcol.agents.simulate.gui.SimpleView;
 import unalcol.agents.simulate.gui.WorkingPanel;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author Jonatan
  */
-public class FourInRowMainFrame extends JFrame implements EnvironmentView{
+public class FourInRowMainFrame extends JFrame implements EnvironmentView {
   
   /**
 	 * 
@@ -60,7 +54,7 @@ public class FourInRowMainFrame extends JFrame implements EnvironmentView{
   JLabel jLabelw = new JLabel();
   JLabel jLabelb = new JLabel();
 
-  public FourInRowMainFrame( Agent w_agent, Agent b_agent ) {
+  public FourInRowMainFrame(Agent w_agent, Agent b_agent ) {
     view = new SimpleView( drawArea );
     white_agent = w_agent;
     black_agent = b_agent;

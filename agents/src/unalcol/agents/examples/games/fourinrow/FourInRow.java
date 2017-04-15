@@ -16,7 +16,7 @@ import unalcol.types.collection.vector.Vector;
  *
  * @author Jonatan
  */
-public class FourInRow extends Environment{
+public class FourInRow extends Environment {
     public static String PASS = "PASS";
     public static String TURN = "play";
     public static String TIME = "time";
@@ -27,14 +27,14 @@ public class FourInRow extends Environment{
     protected Board board = null;
     protected Clock clock;
     
-    protected static Vector<Agent> init( Agent white, Agent black ){
+    protected static Vector<Agent> init(Agent white, Agent black ){
         Vector<Agent> a = new Vector<Agent>();
         a.add(white);
         a.add(black);
         return a;
     }
     
-    public FourInRow( Agent white, Agent black ){
+    public FourInRow(Agent white, Agent black ){
         super( init( white, black ) );
     }
     
