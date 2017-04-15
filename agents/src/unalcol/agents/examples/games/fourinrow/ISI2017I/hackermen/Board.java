@@ -13,6 +13,8 @@ import java.util.Map;
 public class Board {
     protected int[][] board;
 
+    private static boolean DEBUG = false;
+
     public Board(int size){
         board = new int[size][size];
         for(int i = 0; i < size; i++)
@@ -92,13 +94,12 @@ public class Board {
         Board b;
         Map<Board, String> ans = new HashMap<>();
         String action;
-        for(int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[0].length; j++) {
+        for(int i = board.length -1; i>=0; i--) {
+            for (int j = board.length -1; j >= 0; j--) {
                 if(validPosition(i,j)){
                     b = new Board(this);
                     b.setOwner(i,j,player);
                     action = (i + ":" + j + ":" + player);
-                    System.out.println(action);
                     ans.put(b, action);
                 }
             }
@@ -125,7 +126,23 @@ public class Board {
         if(bad_fours > 0)
             return Integer.MIN_VALUE;
 
-        return (good_threes*100 + good_twos*10) - (bad_threes*100 + bad_twos*10);
+        int ans = (good_threes * 100 + good_twos * 10) - (bad_threes * 100 + bad_twos * 10);
+        if(DEBUG) {
+            System.out.println("player " + player);
+            System.out.println("board: ");
+            System.out.println(this);
+            System.out.println("good_fours " + good_fours);
+            System.out.println("good_threes " + good_threes);
+            System.out.println("good_tows " + good_twos);
+            System.out.println("bad_fours " + bad_fours);
+            System.out.println("bad_threes " + bad_threes);
+            System.out.println("bad_tows " + bad_twos);
+
+
+            System.out.println("utility = " + ans);
+
+        }
+        return (ans);
     }
 
     /**
@@ -157,8 +174,12 @@ public class Board {
                 else
                     break;
             }
+            if(row > 0 && col > 0 && col + streak < board[0].length && row + streak < board.length &&
+                    board[row - 1][col - 1] ==  board[row + streak][col + streak ] && board[row - 1][col - 1] == -board[row][col])
+                count = 0;
         }
         total += (count == streak ? 1 : 0);
+
         count = 0;
         if(row - streak + 1 >=0 && col + streak - 1 < board[0].length){
             for(int i = 0; i < streak; i++){
@@ -168,6 +189,9 @@ public class Board {
                     break;
             }
         }
+        if(row < board.length-1 && col < board[0].length-1 && col - streak > 0 && row - streak  > 0 &&
+                board[row - streak ][col - streak] ==  board[row + 1][col +1] && board[row + 1][col + 1] == -board[row][col])
+            count = 0;
         total += (count == streak ? 1 : 0);
         return total;
     }
@@ -181,6 +205,8 @@ public class Board {
                 else break;
             }
         }
+        if(col > 0 && col + streak < board.length && board[row][col-1] == board[row][col + streak] && board[row][col - 1] == -board[row][col])
+            count = 0;
         return (count == streak ? 1 : 0);
     }
 
@@ -193,6 +219,26 @@ public class Board {
                 else break;
             }
         }
+        if(row > 0 && row + streak < board.length && board[row -1][col] == board[row + streak][col] && board[row -1][col] == -board[row][col])
+            count = 0;
         return (count == streak ? 1 : 0);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("");
+        for (int[] aBoard : board) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (aBoard[j] == 1)
+                    sb.append("W");
+                else if (aBoard[j] == -1)
+                    sb.append("B");
+                else
+                    sb.append("#");
+                sb.append(" ");
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 }

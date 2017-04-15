@@ -18,7 +18,8 @@ public class GameTree {
     private Map<Board, Integer> value;
     private Map<Board, Board> maxPruning;
     private Map<Board, Board> minPruning;
-    private static final int MAX_DEPTH = 4;
+    private static final int MAX_DEPTH = 6;
+    private static boolean DEBUG = true;
 
     public GameTree(Board root, String player){
         super();
@@ -34,7 +35,7 @@ public class GameTree {
     }
 
     public void setRoot(Board root){
-        root = this.root;
+        this.root = root;
         depth = 0;
     }
 
@@ -45,15 +46,10 @@ public class GameTree {
         return null;
     }
 
-    public String getBestMove(Board state)
-    {
-        if (bestChild.containsKey(state))
-            return get(state, bestChild.get(state));
-        return null;
-    }
-
     public String getBestMove()
     {
+        if(DEBUG)
+            System.out.println("this.root \n" + this.root);
         if (bestChild.containsKey(this.root))
             return get(this.root, bestChild.get(this.root));
         return null;
@@ -72,7 +68,7 @@ public class GameTree {
     }
 
     public void explore(){
-        alphabeta(root, ++depth, Integer.MIN_VALUE, Integer.MAX_VALUE, true);
+        alphabeta(this.root, ++depth, Integer.MIN_VALUE, Integer.MAX_VALUE, true);
     }
 
     private int alphabeta(Board currentRoot, int depth, int a, int b, boolean maximize)

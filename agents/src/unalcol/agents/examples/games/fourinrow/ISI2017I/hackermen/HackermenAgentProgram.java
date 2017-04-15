@@ -16,6 +16,7 @@ public class HackermenAgentProgram implements AgentProgram{
     private GameTree gameTree;
     protected String color;
     private static String PASS = "0:0:";
+    private String action;
     private static boolean DEBUG = true;
 
     public HackermenAgentProgram(String color){
@@ -36,14 +37,18 @@ public class HackermenAgentProgram implements AgentProgram{
         catch (Exception e){}
         if(Perceptions.TURN.getStringPerception(p).equals(color)) {
             Board b = new Board(p);
+            if(DEBUG)
+                System.out.println("GameBoard: \n" + b);
+
             if (b.isFull())
                 return new Action(PASS);
             gameTree.setRoot(b);
-            String action;
+            if (DEBUG)
+                System.out.println("previous = " + action);
             gameTree.explore();
             action = gameTree.getBestMove();
             if (DEBUG)
-                System.out.println("action = " + action);
+                System.out.println("new = " + action);
             return new Action(action);
         }
         return new Action(PASS);
