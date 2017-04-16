@@ -13,7 +13,7 @@ import unalcol.agents.Agent;
 public class ReversiMain {
   public static void main( String[] argv ){
     // Reflection
-    Agent w_agent = new Agent( new DummyReversiAgentProgram("white") );
+    Agent w_agent = new Agent( new ReversiAgentHommies("white") );
     Agent b_agent = new Agent( new DummyReversiAgentProgram("black") );
     ReversiMainFrame frame = new ReversiMainFrame( w_agent, b_agent );
     frame.setVisible(true);
