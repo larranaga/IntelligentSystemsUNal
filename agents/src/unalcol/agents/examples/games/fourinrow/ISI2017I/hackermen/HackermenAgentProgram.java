@@ -4,7 +4,6 @@ import unalcol.agents.Action;
 import unalcol.agents.AgentProgram;
 import unalcol.agents.Percept;
 import unalcol.agents.examples.games.fourinrow.FourInRow;
-import unalcol.agents.examples.games.reversi.Reversi;
 
 import java.util.ArrayList;
 
@@ -18,14 +17,15 @@ public class HackermenAgentProgram implements AgentProgram{
     protected Node root;
     public static int size;
     protected String[][] move;
-    private static boolean DEBUG = false;
+    private static boolean DEBUG = true;
     private byte player;
     private static final int oo = Integer.MAX_VALUE;
+
 
     public HackermenAgentProgram(String color){
         this.color = color;
         player = 1;
-        if(this.color == FourInRow.BLACK)
+        if(this.color.equals(FourInRow.BLACK))
             player = -1;
         PASS = PASS + color;
         init();
@@ -45,17 +45,19 @@ public class HackermenAgentProgram implements AgentProgram{
                 for(int j = 0; j < this.size; j++)
                     move[i][j] = i +":"+j;
         }
-        if (p.getAttribute(Reversi.TURN).equals(color)) {
+        if (Perceptions.TURN.getStringPerception(p).equals(color)) {
 
-            size = Integer.parseInt(p.getAttribute(Reversi.SIZE).toString());
-            String sTurn = p.getAttribute(Reversi.TURN).toString();
+            size = Perceptions.SIZE.getIntPerception(p);
+            String sTurn = Perceptions.TURN.getStringPerception(p);
 
             byte type;
-            if (sTurn.equals(Reversi.WHITE))
+            if (sTurn.equals(FourInRow.WHITE))
                 type = 1;
             else
                 type = -1;
             root = new HackermenAgentProgram.Node(p, type);
+            /*if(DEBUG)
+                System.out.println("board i see is:" + root.toString());*/
             int total = size * size;
             int percentage = 100 * (root.w + root.b) / total;
             int depth = 1, ini = 0;
@@ -72,14 +74,11 @@ public class HackermenAgentProgram implements AgentProgram{
 
             minimax(root, depth, -oo, oo);
             if (root.best == null) {
-
-                return new Action(Reversi.PASS);
+                return new Action(PASS);
             } else {
-
                 if (root.best.x == -1 || root.best.y == -1)
-                    return new Action(Reversi.PASS);
+                    return new Action(PASS);
                 root = root.best;
-
                 return new Action(root.x + ":" + root.y + ":" + color);
             }
         }
@@ -87,12 +86,17 @@ public class HackermenAgentProgram implements AgentProgram{
     }
 
     private int minimax(Node u, int depth, int alpha, int beta){
-        if(depth == 0 || u.w + u.b == size*size)
+        if(depth == 0 || u.w + u.b == size*size || u.winState)
             return u.profit;
         u.generateOptions();
         int profit = 0;
+        /*if(DEBUG)
+            System.out.println("parent node: " + u.toString());
+           */
         if(u.turn == player){
             profit = -oo;
+            /*if(DEBUG)
+                System.out.println("max turn");*/
             for(Node e: u.options){
                 int tmp = minimax(e, depth-1, alpha, beta);
                 alpha = Math.max(alpha, tmp);
@@ -127,6 +131,7 @@ public class HackermenAgentProgram implements AgentProgram{
         Node best;
         ArrayList<Node> options;
         byte [][] board;
+        boolean winState;
 
         public Node(Percept p, byte turn){
             this.turn = turn;
@@ -147,7 +152,8 @@ public class HackermenAgentProgram implements AgentProgram{
                 }
             }
             x = y= -1;
-            profit = 0;
+            profit = (this.board == null ? 0: getProfit());
+            this.winState = false;
             options = new ArrayList<>();
             best = null;
         }
@@ -155,9 +161,10 @@ public class HackermenAgentProgram implements AgentProgram{
         public Node(Node other){
             turn = (byte)-other.turn;
             w = other.w;
+            this.winState = false;
             b = other.b;
             x=y=-1;
-            profit = 0;
+            profit = (this.board == null ? 0 :getProfit());
             board = other.board.clone();
             options = new ArrayList<>();
             best = null;
@@ -179,11 +186,10 @@ public class HackermenAgentProgram implements AgentProgram{
         public boolean generateOptions(){
             if(options.size() > 0)
                 return false;
-            Node tmp;
+            Node tmp = new Node(this);
             for(int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
-                    if(isValid(i,j)){
-                        tmp = new Node(this);
+                    if(tmp.isValid(i,j)){
                         tmp.play(i, j);
                         options.add(tmp);
                     }
@@ -205,7 +211,7 @@ public class HackermenAgentProgram implements AgentProgram{
         }
 
         public int getProfit(){
-            byte good = (byte)turn;
+            byte good = turn;
             byte bad = (byte)(good == 1 ? -1 : 1);
             int good_fours = getStreak(good, 4);
             int good_threes= getStreak( good, 3);
@@ -213,11 +219,27 @@ public class HackermenAgentProgram implements AgentProgram{
             int bad_fours = getStreak( bad, 4);
             int bad_threes= getStreak( bad, 3);
             int bad_twos = getStreak( bad, 2);
-            if(good_fours > 0)
+            if(DEBUG) {
+                System.out.println(this);
+                System.out.println("getting profit");
+                System.out.println("good fours = " + good_fours);
+                System.out.println("good threes = " + good_threes);
+                System.out.println("good twos = " + good_twos);
+                System.out.println("bad fours = " + bad_fours);
+                System.out.println("bad threes = " + bad_threes);
+                System.out.println("bad twos = " + bad_twos);
+            }
+            if(good_fours > 0) {
+                this.winState = true;
                 return oo;
-            if(bad_fours > 0)
+            }
+            if(bad_fours > 0) {
+                this.winState = true;
                 return -oo;
+            }
             int ans = (good_threes * 100 + good_twos * 10) - (bad_threes * 100 + bad_twos * 10);
+            if(DEBUG)
+                System.out.println("total profit: " + ans);
             return ans;
         }
 
@@ -298,6 +320,28 @@ public class HackermenAgentProgram implements AgentProgram{
         @Override
         public int compareTo(Node o) {
             return this.profit - o.profit;
+        }
+
+        @Override
+        public String toString() {
+            StringBuilder sb = new StringBuilder("");
+            sb.append("Number of whites: ").append(this.w).append(" ");
+            sb.append("Number of blacks: ").append(this.b).append("\n");
+            sb.append("Turn of: ").append(this.turn == 1 ? "white" : "black").append("\n");
+            sb.append("profit: ").append(this.profit).append("\n");
+            for(byte[] x: this.board){
+                for (byte aX : x) {
+                    if(aX == 1)
+                        sb.append("w");
+                    else if (aX == 0)
+                        sb.append(".");
+                    else if (aX == -1)
+                        sb.append("b");
+                    sb.append(" ");
+                }
+                sb.append("\n");
+            }
+            return sb.toString();
         }
     }
 

@@ -37,7 +37,6 @@ public enum Perceptions {
     }
 
     public String getPositionPerception(Percept p, int x, int y){
-        String player = (String) p.getAttribute(x + ":" + y );
-        return player;
+        return (String) p.getAttribute(x + ":" + y );
     }
 }
