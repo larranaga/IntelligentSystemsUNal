@@ -17,7 +17,7 @@ public class HackermenAgentProgram implements AgentProgram{
     protected Node root;
     public static int size;
     protected String[][] move;
-    private static boolean DEBUG = true;
+    private static boolean DEBUG = false;
     private byte player;
     private static final int oo = Integer.MAX_VALUE;
 
@@ -186,9 +186,10 @@ public class HackermenAgentProgram implements AgentProgram{
         public boolean generateOptions(){
             if(options.size() > 0)
                 return false;
-            Node tmp = new Node(this);
+
             for(int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
+                    Node tmp = new Node(this);
                     if(tmp.isValid(i,j)){
                         tmp.play(i, j);
                         options.add(tmp);
