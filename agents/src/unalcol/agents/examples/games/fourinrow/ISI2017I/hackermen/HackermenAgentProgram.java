@@ -16,6 +16,7 @@ public class HackermenAgentProgram implements AgentProgram{
     private String action;
     protected Node root;
     public static int size;
+
     protected String[][] move;
     private static boolean DEBUG = false;
     private byte player;
