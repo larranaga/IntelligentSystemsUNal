@@ -21,7 +21,8 @@ enum Perceptions {
     RESOURCE_COLOR(11),
     RESOURCE_SHAPE(12),
     RESOURCE_SIZE(13),
-    RESOURCE_WEIGHT(14);
+    RESOURCE_WEIGHT(14),
+    ENERGY(15);
 
     public static SimpleLanguage language;
 
@@ -42,5 +43,9 @@ enum Perceptions {
         return ( (Boolean) p.getAttribute(language.getPercept(perceptionIndex))).
                 booleanValue();
         //return (Boolean)getPerception(p);
+    }
+
+    public int getIntPerception(Percept p){
+        return (Integer)(getPerception(p));
     }
 }

@@ -13,7 +13,7 @@ import unalcol.agents.simulate.util.SimpleLanguage;
  * Created by larra on 13/03/17.
  */
 public class HackermenAgentProgram implements AgentProgram{
-    static boolean DEBUG = false;
+    static boolean DEBUG = true;
 
     private Deque<Action> actionsQueue;
     private Action lastAction;
@@ -53,14 +53,21 @@ public class HackermenAgentProgram implements AgentProgram{
                         Perceptions.WBACK.getBooleanPerception(p),
                         Perceptions.WLEFT.getBooleanPerception(p) };
 
-
-
+        int energy = Perceptions.ENERGY.getIntPerception(p);
+        if(DEBUG)
+            System.out.println("energy level "+ energy);
         boolean[] adjacent_agent = //{ false, false, false, false };
                 {       Perceptions.AFRONT.getBooleanPerception(p),
                         Perceptions.ARIGHT.getBooleanPerception(p),
                         Perceptions.ABACK.getBooleanPerception(p),
                         Perceptions.ALEFT.getBooleanPerception(p) };
-
+        if(DEBUG){
+            System.out.println("agent perceptions");
+            System.out.print("[ ");
+            for(boolean b: adjacent_agent)
+                System.out.print( b + " ");
+            System.out.println("]");
+        }
 
         boolean[] obstacle = { wall[0] || adjacent_agent[0],
                         wall[1] || adjacent_agent[1],

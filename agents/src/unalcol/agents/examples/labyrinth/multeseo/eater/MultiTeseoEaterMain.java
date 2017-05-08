@@ -17,7 +17,7 @@ import unalcol.types.collection.vector.Vector;
 public class MultiTeseoEaterMain {
     private static SimpleLanguage getLanguage(){
 	    return  new SimpleLanguage( new String[]{"front", "right", "back", "left", "treasure", "fail",
-	        "afront", "aright", "aback", "aleft", "resource", "resource-color", "resource-shape", "resource-size", "resource-weight"},
+	        "afront", "aright", "aback", "aleft", "resource", "resource-color", "resource-shape", "resource-size", "resource-weight", "energy_level"},
 	                                   new String[]{"no_op", "die", "advance", "rotate", "eat"}
 	                                   );
 	  }
@@ -38,8 +38,8 @@ public class MultiTeseoEaterMain {
 	    LabyrinthDrawer.CELL_SIZE = 40;
 	    Labyrinth.DEFAULT_SIZE = 15;
 	    
-	    Agent agent1 = new Agent(teseo[7]);
-	    Agent agent2 = new Agent(teseo[3]);
+	    Agent agent1 = new Agent(teseo[3]);
+	    Agent agent2 = new Agent(teseo[7]);
 	    
 	    //Agent agent3 = new Agent(p3);
 	    Vector<Agent> agent = new Vector<Agent>();
