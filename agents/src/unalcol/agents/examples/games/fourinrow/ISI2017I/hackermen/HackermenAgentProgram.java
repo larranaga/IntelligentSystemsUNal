@@ -46,6 +46,8 @@ public class HackermenAgentProgram implements AgentProgram{
                 for(int j = 0; j < this.size; j++)
                     move[i][j] = i +":"+j;
         }
+        
+        //If it's my turn
         if (Perceptions.TURN.getStringPerception(p).equals(color)) {
 
             size = Perceptions.SIZE.getIntPerception(p);
@@ -60,8 +62,8 @@ public class HackermenAgentProgram implements AgentProgram{
             /*if(DEBUG)
                 System.out.println("board i see is:" + root.toString());*/
             int total = size * size;
-            int percentage = 100 * (root.w + root.b) / total;
-            int depth = 1, ini = 0;
+            int percentage = 100 * (root.w + root.b) / total; //Non-empty tiles percentage
+            int depth = 1, ini = 0; //<--
             if (size <= 10)
                 ini = 2;
             else if (size < 16)
@@ -128,7 +130,7 @@ public class HackermenAgentProgram implements AgentProgram{
     private class Node implements Comparable<Node>{
         int profit;
         byte turn;
-        int x,y, w, b;
+        int x,y, w, b; //w,b: number of whites/blacks
         Node best;
         ArrayList<Node> options;
         byte [][] board;
@@ -212,6 +214,7 @@ public class HackermenAgentProgram implements AgentProgram{
             profit = getProfit();
         }
 
+        //Returns profit suming up the values of each 2-row and 3-row. 2-rows have a value of 10 and 3-rows have a value of 100
         public int getProfit(){
             byte good = turn;
             byte bad = (byte)(good == 1 ? -1 : 1);
@@ -231,10 +234,14 @@ public class HackermenAgentProgram implements AgentProgram{
                 System.out.println("bad threes = " + bad_threes);
                 System.out.println("bad twos = " + bad_twos);
             }
+            
+            //I won!! :)
             if(good_fours > 0) {
                 this.winState = true;
                 return oo;
             }
+            
+            //I lost :(
             if(bad_fours > 0) {
                 this.winState = true;
                 return -oo;
@@ -245,6 +252,7 @@ public class HackermenAgentProgram implements AgentProgram{
             return ans;
         }
 
+        //Tells how many streaks of a given size and a given color are in the board
         private int getStreak( byte player, int streak) {
             int count = 0;
             for(int i  = 0; i < board.length; i++){
@@ -291,6 +299,7 @@ public class HackermenAgentProgram implements AgentProgram{
             return total;
         }
 
+        //Tells whether there is a streak of n tiles long in "the sight" of a specified tile returning 1 if so and 0 otherwise
         private int getHorizontalStreak(int row, int col, int streak) {
             int count = 0;
             if(col + streak - 1 < board[0].length){
