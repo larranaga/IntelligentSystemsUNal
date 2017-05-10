@@ -1,6 +1,8 @@
 package unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.hackermen;
 
 
+import unalcol.agents.Percept;
+
 import java.util.HashMap;
 /**
  * Created by larra on 11/03/17.
@@ -8,6 +10,7 @@ import java.util.HashMap;
 public class Board<N extends Node> {
     private HashMap<N, HashMap<N, Long>> board;
     private HashMap<N, Long> explored;
+    private HashMap<N, Long> food;
 
     public Board(){
         board = new HashMap<N, HashMap<N, Long>>();
@@ -32,6 +35,8 @@ public class Board<N extends Node> {
             board.put(n2,new HashMap<N, Long>());
         board.get(n2).put(n1, System.currentTimeMillis());
         tryExplore(n2);
+    }
+    public void addFood(N pos, Percept p){
 
     }
 

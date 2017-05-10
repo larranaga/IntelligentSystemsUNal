@@ -6,6 +6,7 @@ import unalcol.agents.examples.labyrinth.Labyrinth;
 import unalcol.agents.examples.labyrinth.LabyrinthDrawer;
 import unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.ARRE.ARREA2;
 import unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.CEM.TeseoCEM;
+import unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.hackermen.eater.MrRobotAgent;
 import unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.parcelona.MessiTeseo;
 import unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.Mirmidones.SuperTeseo;
 import unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.SCS.SimpleAgentSCS;
@@ -27,7 +28,7 @@ public class MultiTeseoEaterMain {
 
 	    teseo[1] = new Agent1( getLanguage() );
 	    teseo[2] = new TeseoCEM( getLanguage() );
-	    teseo[3] = new HackermenAgentProgram(getLanguage());
+	    teseo[3] = new MrRobotAgent(getLanguage());
 	    teseo[4] = new SuperTeseo(getLanguage());
 		teseo[6] = new ARREA2(getLanguage());
 		teseo[7] = new MessiTeseo(getLanguage());
