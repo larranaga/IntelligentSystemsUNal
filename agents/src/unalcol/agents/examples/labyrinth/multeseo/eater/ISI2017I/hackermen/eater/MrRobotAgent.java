@@ -76,7 +76,7 @@ public class MrRobotAgent extends Helper {
 	}
 
 
-	public int accion(boolean PF, boolean PD, boolean PA, boolean PI, boolean MT, boolean FAIL, boolean AF, boolean AD, boolean AA, boolean AI, boolean RS, int EN) {
+	public int accion(boolean PF, boolean PD, boolean PA, boolean PI, boolean MT, boolean FAIL, boolean AF, boolean AD, boolean AA, boolean AI, boolean RS, int RSID, int EN) {
 		if( MT ) return -1;
 		curp[0] = PF; curp[1] = PD; curp[2] = PA; curp[3] = PI;
 		curp[4] = AF; curp[5] = AD; curp[6] = AA; curp[7] = AI;

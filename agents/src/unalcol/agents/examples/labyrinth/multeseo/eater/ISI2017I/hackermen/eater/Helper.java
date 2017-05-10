@@ -29,7 +29,7 @@ public abstract class Helper implements AgentProgram {
 	}
 
 	public abstract int accion(boolean PF, boolean PD, boolean PA, boolean PI, boolean MT, boolean FAIL, boolean AF,
-			boolean AD, boolean AA, boolean AI, boolean RS, int EN);
+			boolean AD, boolean AA, boolean AI, boolean RS, int RSID, int EN);
 
 	public Action compute(Percept p) {
 		if (cmd.size() == 0) {
@@ -45,8 +45,20 @@ public abstract class Helper implements AgentProgram {
 			boolean AI = Perceptions.ALEFT.getBooleanPerception(p);
 			boolean RS = Perceptions.RESOURCE.getBooleanPerception(p);
 			int EN = Perceptions.ENERGY.getIntPerception(p);
-
-			int d = accion(PF, PD, PA, PI, MT, FAIL, AF, AD, AA, AI, RS, EN);
+			int RSID = 0;
+			if(RS) {
+				//order is color shape size weight
+				RSID = 0;
+				if(Perceptions.RESOURCE_COLOR.getBooleanPerception(p))
+					RSID += (1<<3);
+				if(Perceptions.RESOURCE_SHAPE.getBooleanPerception(p))
+					RSID += (1<<2);
+				if(Perceptions.RESOURCE_SIZE.getBooleanPerception(p))
+					RSID += (1<<1);
+				if(Perceptions.RESOURCE_WEIGHT.getBooleanPerception(p))
+					RSID += (1);
+			}
+			int d = accion(PF, PD, PA, PI, MT, FAIL, AF, AD, AA, AI, RS, RSID, EN);
 			
 			if( d == -2 ) cmd.add( LabyrinthUtil.EAT );
 			else if (0 <= d && d < 4) {

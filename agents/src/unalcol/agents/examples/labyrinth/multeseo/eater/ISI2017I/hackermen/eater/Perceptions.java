@@ -45,6 +45,10 @@ enum Perceptions {
         //return (Boolean)getPerception(p);
     }
 
+    public String getStringPerception(Percept p){
+        return p.getAttribute(language.getPercept(perceptionIndex)).toString();
+    }
+
     public int getIntPerception(Percept p){
         return (Integer)(getPerception(p));
     }
