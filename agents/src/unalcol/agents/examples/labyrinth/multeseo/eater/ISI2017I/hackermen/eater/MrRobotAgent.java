@@ -1,5 +1,6 @@
 package unalcol.agents.examples.labyrinth.multeseo.eater.ISI2017I.hackermen.eater;
 
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import unalcol.agents.examples.labyrinth.multeseo.eater.MultiTeseoEaterLabyrinth;
 import unalcol.agents.simulate.util.SimpleLanguage;
 
@@ -15,6 +16,7 @@ public class MrRobotAgent extends Helper {
 	private   HashMap<Pair, Integer> map;
 	private   int x, y, targetX, targetY;
 	private   HashSet<Pair> queue;
+	private   HashSet<Integer> badFood;
 	private   int[] possible;
 	private   Pair goal;
 	private   Stack<Pair> path;
@@ -30,6 +32,8 @@ public class MrRobotAgent extends Helper {
 	private   boolean eating;
 	private   boolean iHaveToEat;
 	private   boolean waiting;
+	private   int prevEnergy;
+
 
 	/*
 	 * 0 - Casilla sin visitar
@@ -51,9 +55,11 @@ public class MrRobotAgent extends Helper {
 		possible = new int[4];
 		visitedDFS = new HashSet<Pair>(8);
 		resources = new HashSet<Pair>(100);
+		badFood = new HashSet<>(100);
 		eating = false;
 		iHaveToEat = false;
 		waiting = false;
+		prevEnergy = -1;
 	}
 
 	public MrRobotAgent(SimpleLanguage _language  ) {
@@ -70,9 +76,11 @@ public class MrRobotAgent extends Helper {
 		possible = new int[4];
 		visitedDFS = new HashSet<Pair>(8);
 		resources = new HashSet<Pair>(100);
+		badFood = new HashSet<>(100);
 		eating = false;
 		iHaveToEat = false;
 		waiting = false;
+		prevEnergy = -1;
 	}
 
 
@@ -80,6 +88,10 @@ public class MrRobotAgent extends Helper {
 		if( MT ) return -1;
 		curp[0] = PF; curp[1] = PD; curp[2] = PA; curp[3] = PI;
 		curp[4] = AF; curp[5] = AD; curp[6] = AA; curp[7] = AI;
+		if(prevEnergy == -1)
+		    prevEnergy = EN;
+		if(EN <= 0)
+            System.out.println("STARVED");
 
 		if(waiting) {
 			if(AF) return -1;
@@ -88,14 +100,12 @@ public class MrRobotAgent extends Helper {
 				boolean rmv = resources.remove(new Pair(x,y));
 				map.put(new Pair(x+dx[ID], y+dy[ID]), 1);
 				Pair food = bfsSearchFood(new Pair(x,y));
-				//El otro me bloqueo todo todo todo
 				if( food == null ) {
 					//Esperar hasta que se mueva
 					map.put(new Pair(x+dx[ID], y+dy[ID]), 2);
 					waiting = true;
 					if(rmv) resources.add(new Pair(x,y));
 					return -1;
-
 				}
 				makePath(food, null);
 				//No hay food cerca a la que alcance a llegar
@@ -180,7 +190,7 @@ public class MrRobotAgent extends Helper {
 				boolean rmv = resources.remove(new Pair(x,y));
 				map.put(new Pair(x+dx[ID], y+dy[ID]), 1);
 				Pair food = bfsSearchFood(new Pair(x,y));
-				//El otro me bloqueo todo todo todo
+
 				if( food == null ) {
 					//Esperar hasta que se mueva
 					map.put(new Pair(x+dx[ID], y+dy[ID]), 2);
@@ -213,7 +223,6 @@ public class MrRobotAgent extends Helper {
 					boolean rmv = resources.remove(new Pair(x,y));
 					map.put(new Pair(x+dx[ID], y+dy[ID]), 1);
 					Pair food = bfsSearchFood(new Pair(x,y));
-					//El otro me bloqueo todo todo todo
 					if( food == null ) {
 						//Esperar hasta que se mueva
 						map.put(new Pair(x+dx[ID], y+dy[ID]), 2);
@@ -269,7 +278,6 @@ public class MrRobotAgent extends Helper {
 					resources.add(fl);
 					if(rmv) resources.add(new Pair(x,y));
 					return -1;
-					//Esperemos hasta que se vaya el otro
 				}
 				if(go.equals(new Pair(x,y))) {
 					map.put(enemy, 2);
@@ -303,18 +311,30 @@ public class MrRobotAgent extends Helper {
 				else if ( x > targetX) ID = 0;
 			}
 			x = targetX; y = targetY;
-			if( RS ){
-				resources.add( new Pair( x, y ) );
-				if( iHaveToEat || EN < MultiTeseoEaterLabyrinth.MAX_ENERGY_LEVEL/2 ){
-					eating = true;
-					iHaveToEat = false;
-					return -2;
-				}
+			if( RS){
+			    if(eating && EN < prevEnergy && !badFood.contains(RSID)){
+                    resources.remove(new Pair(x,y));
+                    badFood.add(RSID);
+                    eating = false;
+                    //System.out.println("THIS IS BAD FOOD JUST FOUND");
+                }
+                else if(!badFood.contains(RSID)){
+                    resources.add(new Pair(x, y));
+                    if (iHaveToEat || EN < MultiTeseoEaterLabyrinth.MAX_ENERGY_LEVEL / 2) {
+                        eating = true;
+                        iHaveToEat = false;
+                        prevEnergy = EN;
+                        return -2;
+                    }
+                }
 			}
 		}
 
 		if( eating ){
-			if( EN < MultiTeseoEaterLabyrinth.MAX_ENERGY_LEVEL ) return -2;
+			if( EN < Math.min(MultiTeseoEaterLabyrinth.MAX_ENERGY_LEVEL, 50) ){
+                prevEnergy = EN;
+                return -2;
+            }
 			eating = false;
 		}
 

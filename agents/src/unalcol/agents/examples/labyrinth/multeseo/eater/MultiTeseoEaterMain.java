@@ -40,7 +40,7 @@ public class MultiTeseoEaterMain {
 	    Labyrinth.DEFAULT_SIZE = 15;
 	    
 	    Agent agent1 = new Agent(teseo[3]);
-	    Agent agent2 = new Agent(teseo[7]);
+	    Agent agent2 = new Agent(teseo[1]);
 	    
 	    //Agent agent3 = new Agent(p3);
 	    Vector<Agent> agent = new Vector<Agent>();
